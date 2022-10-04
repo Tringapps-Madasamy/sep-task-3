@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="index.css">
+    </head>
+    <body>
+     <div class="firstchild">
+        <div class="textcontainer">
+            <input type="text" class="input1" id="Name" name="Name" placeholder="enter your name">
+            <input type="number" class="input2" id="age" name="age" placeholder="enter your age">
+            <input type="text" class="input3" id="mark" name="mark" placeholder="enter your mark">
+            <input type="button" class="plusbtn" name="plusbutton" onclick="Plusdo()" value='+'>
+        </div>
+        <div id="inputdata"></div>
+        <div class="subcanbtn">
+        <input type="submit" class="submitbtn" value="submit" onclick="showInTable(1)">
+        <input type="submit" class="cancelbtn" value="cancel" onclick="clearAllData()">
+    </div>
+        <br><br>
+      </div>  
+        <div class="tabledatacontainer">
+            <table class="userdetailstable" border="2">
+                <thead>
+                    <tr id="row">
+                        <th><input type="button" id="sort-name" value="NAME" onclick="sortname()"></th>
+                        <th><input type="button" id="sort-age" value="AGE" onclick="sortage()"></th>
+                        <th><input type="button" id="sort-mark" value="MARK" onclick="sortmark()"></th>
+                    </tr>
+                </thead>
+                <tbody id="mytable" class="table-body">
+
+                </tbody>
+            </table>
+            <div class="buttoncontainer">
+                <button onclick="Previouspage()">PREV</button>
+                <div class="table_pagenation" id="pagination"></div>
+                <button onclick="Nextpage()">NEXT</button>
+            </div>
+        </div>
+        <br><br>
+        <script src="index.js"></script>
+    </body>
+</html>
